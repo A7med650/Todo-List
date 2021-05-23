@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Create Todo</h3>
+
+<form class="ui form" action="{% url 'todo:create_todo' %}" method="post">
+  {% csrf_token %}
+
+  {{ form.as_p }}
+
+  <input type="submit" value="Submit" class="ui button primary">
+
+</form>
+
+{% endblock content %}
