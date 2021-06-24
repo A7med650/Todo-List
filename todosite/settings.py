@@ -30,6 +30,8 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 AUTH_USER_MODEL = 'authentication.User'
 
+LOGIN_URL = '/auth/login/'
+
 # Application definition
 
 INSTALLED_APPS = [

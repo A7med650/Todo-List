@@ -19,7 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('todo.urls', namespace='todo')),
-    path('', include('authentication.urls', namespace='authentication')),
+    path('auth/', include('authentication.urls', namespace='authentication')),
 ]
 
 handler404 = 'todo.views.handel_not_found'

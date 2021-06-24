@@ -8,7 +8,7 @@ class Todo(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     is_completed = models.BooleanField(default=False)
-    # owner = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(to=User, on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+
+Home
+
+{% endblock title %}
 
 {% block content %}
 
 <h1 class="ui header">My List of Todos</h1>
+
+{% include "messages.html" %}
 
 {% if todos %}
 

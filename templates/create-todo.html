@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 
+{% block title %}
+
+Create Todo
+
+{% endblock title %}
+
 {% block content %}
 
 <h3>Create Todo</h3>
+
+{% include "messages.html" %}
 
 <form class="ui form" action="{% url 'todo:create_todo' %}" method="post">
   {% csrf_token %}
