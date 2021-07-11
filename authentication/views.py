@@ -5,10 +5,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
 
 from .models import User
+from .decorators import auth_user_should_not_access
 
 # Create your views here.
 
 
+@auth_user_should_not_access
 def register(request):
     if request.method == 'POST':
         context = {
@@ -64,6 +66,7 @@ def register(request):
     return render(request, 'register.html')
 
 
+@auth_user_should_not_access
 def login_user(request):
 
     if request.method == "POST":
